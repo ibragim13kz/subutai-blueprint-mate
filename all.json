@@ -1,5 +1,28 @@
 [
     {
+        "hosts": "all",
+        "gather_facts": "false",
+        "remote_user": "root",
+        "tasks": [
+            {
+                "name": "Update",
+                "raw": "apt-get -y --allow-unauthenticated update || true"
+            },
+            {
+                "name": "Ensure python is available",
+                "raw": "test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal"
+            },
+            {
+                "name": "Ensure python-apt is available",
+                "raw": "test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt"
+            },
+            {
+                "name": "Upgrade",
+                "raw": "apt-get -y --allow-unauthenticated upgrade"
+            }
+        ]
+    },
+    {
         "hosts": "mate",
         "remote_user": "root",
         "tasks": [
@@ -43,83 +66,83 @@
                 }
             },
             {
-                "name": "install mate-desktop", 
+                "name": "install mate-desktop",
                 "apt": {
-                    "name": "mate-desktop", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "mate-desktop",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install x2goserver", 
+                "name": "install x2goserver",
                 "apt": {
-                    "name": "x2goserver", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "x2goserver",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install mate-session-manager", 
+                "name": "install mate-session-manager",
                 "apt": {
-                    "name": "mate-session-manager", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "mate-session-manager",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install mate-applets", 
+                "name": "install mate-applets",
                 "apt": {
-                    "name": "mate-applets", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "mate-applets",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install mate-backgrounds", 
+                "name": "install mate-backgrounds",
                 "apt": {
-                    "name": "mate-backgrounds", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "mate-backgrounds",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install mate-control-center", 
+                "name": "install mate-control-center",
                 "apt": {
-                    "name": "mate-control-center", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "mate-control-center",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install mate-desktop-environment", 
+                "name": "install mate-desktop-environment",
                 "apt": {
-                    "name": "mate-desktop-environment", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "mate-desktop-environment",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install dconf-cli", 
+                "name": "install dconf-cli",
                 "apt": {
-                    "name": "dconf-cli", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "dconf-cli",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
             {
-                "name": "install firefox-esr", 
+                "name": "install firefox-esr",
                 "apt": {
-                    "name": "firefox-esr", 
-                    "state": "installed", 
-                    "allow_unauthenticated": "yes", 
+                    "name": "firefox-esr",
+                    "state": "installed",
+                    "allow_unauthenticated": "yes",
                     "update_cache": "no"
                 }
             },
