@@ -7,7 +7,7 @@
     "containers": [
         {
             "hostname": "mate",
-            "template": "debian-stretch@subutai:0.4.2",
+            "template": "debian-stretch@subutai:0.4.5",
             "peer-criteria": "MATE-GROUP",
             "size": "${containerSize}"
         }
