@@ -10,6 +10,12 @@
             "template": "debian-stretch",
             "peer-criteria": "MATE-GROUP",
             "size": "${containerSize}"
+        },
+        {
+            "hostname": "mate",
+            "template": "debian-stretch",
+            "peer-criteria": "MATE-GROUP-1",
+            "size": "${containerSize}"
         }
     ],
     "peer-criteria": [
@@ -18,7 +24,7 @@
             "max-price": "25"
         },
         {
-            "name": "MATE-GROUP",
+            "name": "MATE-GROUP-1",
             "max-price": "25"
         }
     ],
