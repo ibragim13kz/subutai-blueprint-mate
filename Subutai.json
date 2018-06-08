@@ -20,10 +20,6 @@
         {
             "name": "MATE-GROUP",
             "max-price": "25"
-        },
-        {
-            "name": "MATE-GROUP",
-            "max-price": "25"
         }
     ],
     "ansible-configuration": {
