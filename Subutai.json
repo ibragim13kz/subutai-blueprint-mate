@@ -15,7 +15,8 @@
     "peer-criteria": [
         {
             "name": "MATE-GROUP",
-            "max-price": "25"
+            "max-price": "25",
+            "groups": "3"
         }
     ],
     "ansible-configuration": {
