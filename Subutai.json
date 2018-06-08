@@ -12,7 +12,7 @@
             "size": "${containerSize}"
         },
         {
-            "hostname": "mate",
+            "hostname": "mate-1",
             "template": "debian-stretch",
             "peer-criteria": "MATE-GROUP-1",
             "size": "${containerSize}"
